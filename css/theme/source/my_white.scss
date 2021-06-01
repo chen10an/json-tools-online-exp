@@ -1,0 +1,82 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(./fonts/source-sans-pro/source-sans-pro.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #222;
+$headingColor: #222;
+
+$mainFontSize: 28px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 600;
+$linkColor: #2a76dd;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.7em;
+$heading3Size: 1.0em;
+$heading4Size: 1.0em;
+
+// $headingMargin: 0 0 40px 0;
+$blockMargin: 20px;
+
+// Change text colors against dark slide backgrounds
+@include dark-bg-text-color(#fff);
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal p {
+    margin: $blockMargin 0 0 0;
+    text-align: left;
+}
+
+.reveal ul {
+    margin-top: $blockMargin/3;
+    margin-bottom: $blockMargin/3;
+}
+
+.reveal .slides {
+    text-align: left;
+    // border: solid;
+}
+
+.reveal .slides section {
+    // border: solid;
+    height: 100%;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reveal h2 {
+    position: absolute;
+    top: 0;
+}
+
+.reveal h3 {
+    position: absolute;
+    top: $heading2Size + 0.5em;
+}
