@@ -80,3 +80,8 @@ $blockMargin: 20px;
     position: absolute;
     top: $heading2Size + 0.5em;
 }
+
+.reveal pre code {
+    font-size: $mainFontSize;
+    line-height: normal;
+}
